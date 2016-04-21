@@ -1,6 +1,6 @@
 {
   "name": "@djforth/data_manager_fp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Data Manager",
   "main": "index.js",
   "scripts": {
@@ -122,8 +122,8 @@
     "lodash": "^4.11.1",
     "moment": "^2.12.0",
     "moment-strftime": "^0.1.5"
-  }
-  , "peerDependencies": {
+  },
+  "peerDependencies": {
     "immutable": "^3.7.6",
     "lodash": "^4.11.1",
     "moment": "^2.12.0",
