@@ -12,6 +12,12 @@
     "test:watch": "asset-pipeline-karma -w",
     "test:mac": "asset-pipeline-karma -b"
   },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "eslintConfig": {
     "extends": "morsedigital",
     "rules": {
