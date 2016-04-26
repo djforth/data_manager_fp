@@ -1,6 +1,7 @@
 const _      = require('lodash/core')
     , Moment = require('moment-strftime');
 
+_.forIn = require('lodash/forIn');
 // Patch as lodash/core missing method
 // _.forIn = function(obj, iterator){
 //   for (var props in obj){
