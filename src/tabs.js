@@ -10,12 +10,19 @@ function checkTab(key){
 function checkValue(){
   let current = 'all';
   return function(v){
-    if (v === current || v === 'all'){
-      current = v;
-      return true;
+    let check = 0;
+    switch (v){
+      case 'all':
+        check = 2;
+        break;
+      case current:
+        check = 1;
+        break;
+      default:
+        check = 0;
     }
     current = v;
-    return false;
+    return check;
   };
 }
 
@@ -39,8 +46,10 @@ module.exports = function(key, data = []){
   };
 
   return function(data, value){
-    if (valueCheck(value) && data.equals(cache.unfiltered)){
-      return cache.filtered;
+    if (data.equals(cache.unfiltered)){
+      let check = valueCheck(value);
+      if (check === 2) return cache.unfiltered;
+      if (check === 1) return cache.filtered;
     }
 
     cache.unfiltered = data;
